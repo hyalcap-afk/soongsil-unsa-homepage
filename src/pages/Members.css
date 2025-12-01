@@ -1,0 +1,130 @@
+/* 페이지 전체 컨테이너 */
+.members-page-container {
+    padding: 100px 50px 80px 50px; /* Navbar와 겹치지 않도록 상단 여백 */
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.main-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 60px;
+}
+
+/* 팀 섹션 제목 스타일 */
+.team-section {
+    margin-bottom: 80px;
+}
+
+
+.team-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #5B92E5; 
+    border-bottom: 2px solid #eee; 
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* 🌟 CSS Grid: 2열 컴팩트 레이아웃 🌟 */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 🌟 한 줄에 2개의 카드만 표시 🌟 */
+    gap: 30px; 
+    max-width: 900px; 
+    margin: 0 auto;
+}
+
+.members-grid.team-executive {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+
+
+}
+
+
+/* 멤버 카드 스타일 */
+.member-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease;
+    min-height: auto; 
+    text-align: center;
+}
+
+.member-card:hover {
+    transform: translateY(-5px); 
+}
+
+/* 멤버 사진 스타일 (컴팩트하게 조정) */
+.member-photo-wrapper {
+    width: 100%;
+    height: 160px; /* 사진 높이 축소 */
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #eee;
+}
+
+.member-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 0.5; /* 사진이 없을 때 대비 */
+}
+
+/* 텍스트 스타일 */
+.member-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+    color: #333;
+}
+
+.member-role {
+    font-size: 1rem;
+    color: #5B92E5; 
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.member-info {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.member-team {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #999;
+    padding-top: 5px;
+    border-top: 1px solid #eee;
+}
+@media (max-width: 768px) {
+    .members-page-container {
+        padding: 50px 20px 50px 20px;
+    }
+    .members-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 100%;
+    }
+    .member-name {
+        font-size: 1.2rem;
+    }
+    .member-phto-wrapper {
+        height: 250px;
+    }
+}

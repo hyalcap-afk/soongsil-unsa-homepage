@@ -1,0 +1,80 @@
+/* 페이지 전체 컨테이너 (다른 페이지와 동일하게 Navbar 가림 방지) */
+.about-page-container {
+    padding: 120px 50px 80px 50px; 
+    text-align: center;
+    background-color: #f8f8f8;
+    min-height: 100vh; /* 화면 전체를 채우도록 설정 */
+}
+
+.main-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 60px;
+}
+
+/* 🌟 소셜 채널 섹션 스타일 🌟 */
+.channel-section {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    gap: 40px; /* 아이콘 간격 */
+    margin-bottom: 80px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+
+  border: 2px solid #5b92e5;
+  border-radius: 50%;
+  color: #333;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(40, 28, 28, 0.05);
+  transition: all 0.3s ease;
+
+}
+
+
+.social-icon {
+    font-size: 3rem !important;
+    margin-bottom: 0;
+}
+.other-link .social-icon {
+    color: #5B92E5;
+
+}
+.channel-name {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* 문의 정보 섹션 */
+.contact-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.instagram-link:hover {
+    color: white;
+    background-color: #5b92e5;
+    border-color: #5b92e5;
+    transform: translateY(-5px);
+}
+.instagram-link{
+    color: #5B92E5;
+    border-color: #5B92E5;
+}

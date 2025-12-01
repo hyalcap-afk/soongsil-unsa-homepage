@@ -1,0 +1,98 @@
+.navbar-header {
+    width: 100%;
+    position: fixed; /* 🌟 페이지 내용 위에 떠 있도록 고정 */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* 다른 요소 위에 표시되도록 높임 */
+    
+    display: flex;
+    justify-content: space-between; /* 로고와 링크를 양 끝으로 배치 */
+    align-items: center;
+    
+    padding: -1px 40px; /* 충분한 여백 */
+    background-color: #333333;
+    color: white;
+
+}
+
+.navbar-icon {
+    width: 200px;
+    height: 220px;
+    display: inline-block;
+    margin-right: 10px;
+    object-fit:  contain;
+}
+.navbar-logo a {
+    font-size: 5.0rem;
+    font-weight: 600;
+}
+.navbar-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.1px;
+}
+.navbar-logo-container a {
+    font-size: 3.0rem;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+.navbar-links a {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-left: 0;
+}
+
+.navbar-links a:hover {
+    color: #5B92E5; /* 마우스 오버 시 색상 변경 */
+}
+/* Navbar.css 파일 하단에 추가 */
+
+/* 🌟 1. 드롭다운 메뉴를 위한 Wrapper 설정 🌟 */
+.nav-item-dropdown-wrapper {
+    position: relative; /* 드롭다운 메뉴의 위치 기준이 됩니다 */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* 🌟 2. 드롭다운 메뉴 컨테이너 🌟 */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* 네비게이션 바 바로 아래에 위치 */
+    right: 50%;
+    transform: translate(50%);
+    background-color: white; /* 흰색 배경 */
+    min-width: 120px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+    z-index: 1000; /* 다른 요소 위에 표시되도록 */
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+/* 🌟 3. 드롭다운 메뉴 아이템 🌟 */
+.dropdown-item {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black !important; 
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+    white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 */
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0; /* 호버 시 배경색 변경 */
+    color: #5B92E5; /* UNSA 메인 색상으로 텍스트 강조 */
+}

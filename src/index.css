@@ -1,0 +1,23 @@
+/* 1. CSS Reset: 모든 요소의 기본 마진, 패딩을 제거하고 box-sizing을 설정합니다. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    /* transition: all 0.3s ease; 부드러운 전환 효과를 위한 설정 (선택 사항) */
+}
+
+/* 2. Body 태그 스타일 (전역 폰트 적용 및 기본 설정) */
+body {
+    /* 🌟 이 부분이 추가되었습니다! 🌟 */
+    font-family: 'Noto Sans KR', sans-serif; 
+    line-height: 1.6; /* 텍스트 줄 간격 */
+    color: #333; /* 기본 텍스트 색상 (짙은 회색) */
+    background-color: #fff; /* 전체 배경은 흰색 */
+    overflow-x: hidden; /* 가로 스크롤바 방지 */
+}
+
+/* 3. 링크 기본 스타일 제거 */
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 부모 요소의 색상 상속 */
+}

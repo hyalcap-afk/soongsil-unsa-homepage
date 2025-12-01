@@ -1,0 +1,11 @@
+/* 모든 페이지에 적용할 공통 스타일을 여기에 작성하세요. */
+
+.page-section {
+    min-height: 100vh; /* 풀스크린 섹션으로 사용하고 싶을 경우 */
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

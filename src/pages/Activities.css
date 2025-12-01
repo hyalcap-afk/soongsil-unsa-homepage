@@ -1,0 +1,49 @@
+/* /src/pages/Activities.css 파일 수정 */
+
+/* 사진 영역 (임시 회색 박스) */
+.activity-photo-wrapper {
+    width: 100%;
+    height: 300px; /* 🌟 사진 영역 높이를 300px로 크게 늘립니다. (카드뉴스 메인) 🌟 */
+    background-color: #ddd; 
+    
+    /* 🌟 Placeholder 텍스트 중앙 정렬 🌟 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.photo-placeholder {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+/* 정보 텍스트 영역 */
+.activity-info {
+    /* 🌟 패딩을 줄여서 텍스트 영역 높이를 최소화합니다. 🌟 */
+    padding: 15px 20px; 
+}
+
+.activity-title {
+    font-size: 1.1rem; /* 제목 크기를 약간 줄여 컴팩트하게 */
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #333;
+    /* 🌟 텍스트가 두 줄 이상일 때 자르지 않도록 설정 (카드 뉴스 스타일) 🌟 */
+    overflow: hidden; 
+}
+
+@media (max-width: 768px) {
+    .activities-page-container {
+        padding: 50px 20px 50px 20px;
+    }
+    .activity-photo-wrapper {
+        height: 280px;
+    }
+    .main-header {
+        font-size: 2rem;
+    }
+ }

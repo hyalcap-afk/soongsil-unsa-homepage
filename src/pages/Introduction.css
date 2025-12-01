@@ -1,0 +1,84 @@
+/* /src/pages/Introduction.css */
+
+/* 페이지 전체 컨테이너 (Navbar 가림 방지) */
+.intro-page-container {
+    padding: 125px 50px 80px 50px; 
+    text-align: center;
+    background-color: #f8f8f8; 
+    min-height: 100vh; /* 화면 전체를 채우도록 설정 */
+}
+
+.main-header {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 80px;
+}
+
+/* --- 섹션 스타일 --- */
+.intro-section {
+    margin-bottom: 100px;
+}
+
+.intro-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #5B92E5; 
+    border-bottom: 2px solid #eee; 
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* 1. 비전 및 목표 섹션 - 2단 텍스트 레이아웃 */
+.intro-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 🌟 2열로 분할 🌟 */
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    text-align: left;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* 2. 핵심 가치 섹션 - 3단 카드 레이아웃 */
+.values-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 🌟 3개의 카드 나열 🌟 */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-item {
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+}
+
+.value-item h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.value-item p {
+    font-size: 1rem;
+    color: #666;
+}

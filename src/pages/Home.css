@@ -1,0 +1,73 @@
+/* 1. 컨테이너: 화면 전체 높이를 차지하여 풀스크린 배경 구현 */
+.home-container {
+  height: 100vh; /* 뷰포트 전체 높이 */
+  width: 100%;
+  
+  /* 배경 이미지 설정 */
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  
+  /* 내용 중앙 정렬을 위한 설정 */
+  position: relative;
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+  text-align: center;
+  padding-top: 55px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+/* 🌟 배경 오버레이: 어두운 배경 위에 흰 글자가 잘 보이도록 반투명 검은색 막을 씌웁니다. 🌟 */
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* 검정색 40% 투명도 */
+  z-index: 1; 
+}
+
+/* 2. 내용 스타일 */
+.home-content {
+  position: relative; 
+  z-index: 2; /* 오버레이보다 위에 표시 */
+  max-width: 900px;
+  padding: 20px;
+  color: white; /* 🌟 배경 이미지 위에 흰색 텍스트 */
+}
+
+/* 3. 텍스트 및 버튼 스타일 (이전 단계에서 최종적으로 결정한 크기) */
+.home-title {
+  font-size: 5rem; 
+  font-weight: 700; 
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.home-subtitle {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.home-button {
+  background-color: transparent; 
+  color: white; 
+  border: 2px solid white; 
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase; 
+}
+
+.home-button:hover {
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: white;
+}
