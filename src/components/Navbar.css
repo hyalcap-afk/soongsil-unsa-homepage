@@ -9,21 +9,21 @@
     justify-content: space-between; /* 로고와 링크를 양 끝으로 배치 */
     align-items: center;
     
-    padding: 1px 40px; /* 충분한 여백 */
+    padding: 8px 40px; /* 충분한 여백 */
     background-color: #333333;
     color: white;
 
 }
 
 .navbar-icon {
-    width: 200px;
-    height: 200px;
+    width: 35px;
+    height: 35px;
     display: inline-block;
     margin-right: 10px;
     object-fit:  contain;
 }
 .navbar-logo a {
-    font-size: 5.0rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 .navbar-logo-container {

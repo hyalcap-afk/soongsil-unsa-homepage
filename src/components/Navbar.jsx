@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; 
 import './Navbar.css';
 import UnsaIcon from '../assets/unsa_icon.jpg'; 
-//import '../assets/font-awesome.css'; // 🌟 Font Awesome 로드를 위해 임시로 추가 (필요하다면)
 
 const Navbar = () => {
     // 🌟 1. 모바일 메뉴 열림/닫힘 상태 추가 🌟
