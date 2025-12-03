@@ -16,8 +16,8 @@
 }
 
 .navbar-icon {
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     display: inline-block;
     margin-right: 10px;
     object-fit:  contain;
@@ -32,7 +32,7 @@
     gap: 0.1px;
 }
 .navbar-logo-container a {
-    font-size: 3.0rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: white;
     text-decoration: none;
@@ -108,10 +108,12 @@
     }
     .navbar-links {
         display: none;
+        background-color: #333333;
+        z-index: 999;
     }
     .navbar-links.open {
         display: flex;
-        position: absoulte;
+        position: absolute;
         top: 50px;
         left: 0;
         right: 0;
@@ -132,11 +134,17 @@
         gap: 0;
     }
     .dropdown-menu {
-        position: static;
+        width: 100%;
+        min-width: 100%;
+        border-radius: 0;
         background-color: rgba(255, 255, 255, 0.1);
         box-shadow: none;
     }
     .dropdown-item {
         color: white !important;
+        background-color: rgba(255, 255, 255, 0.1)
+    }
+    .navbar-links a, .navbar-links .member-link{
+        color: white;
     }
 }
