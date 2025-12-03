@@ -61,7 +61,7 @@
 /* 🌟 1. 드롭다운 메뉴를 위한 Wrapper 설정 🌟 */
 .nav-item-dropdown-wrapper {
     position: relative; /* 드롭다운 메뉴의 위치 기준이 됩니다 */
-    height: auto%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,7 +144,10 @@
     }
     .dropdown-item {
         color: white !important;
-        background-color: rgba(255, 255, 255, 0.1)
+        background-color: rgba(255, 255, 255, 0.1);
+        text-align: center;
+        padding: 10px 0 !important;
+        width: 100%;
     }
     .navbar-links a, .navbar-links .member-link, .nav-item-dropdown-wrapper{
         width: 100%;
