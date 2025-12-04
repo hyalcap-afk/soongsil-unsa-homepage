@@ -148,6 +148,8 @@
         text-align: center;
         padding: 10px 0 !important;
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
     .navbar-links a, .navbar-links .member-link, .nav-item-dropdown-wrapper{
         width: 100%;
