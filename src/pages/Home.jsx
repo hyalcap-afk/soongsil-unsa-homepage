@@ -14,7 +14,6 @@ export const Home = () => {
             <div className="home-content">
                 <h1 className="home-title"></h1>
                 <p className="home-subtitle"></p>
-                <button className="home-button"></button>
             </div>
            
         </div>

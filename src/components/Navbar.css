@@ -1,18 +1,18 @@
+/* ======================================================= */
+/* PC & 공통 스타일 */
+/* ======================================================= */
 .navbar-header {
     width: 100%;
-    position: fixed; /* 🌟 페이지 내용 위에 떠 있도록 고정 */
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; /* 다른 요소 위에 표시되도록 높임 */
-    
+    z-index: 1000;
     display: flex;
-    justify-content: space-between; /* 로고와 링크를 양 끝으로 배치 */
+    justify-content: space-between; 
     align-items: center;
-    
-    padding: 8px 40px; /* 충분한 여백 */
+    padding: 8px 40px; 
     background-color: #333333;
     color: white;
-
 }
 
 .navbar-icon {
@@ -20,17 +20,15 @@
     height: 50px;
     display: inline-block;
     margin-right: 10px;
-    object-fit:  contain;
+    object-fit: contain;
 }
-.navbar-logo a {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
+
 .navbar-logo-container {
     display: flex;
     align-items: center;
-    gap: 0.1px;
+    gap: 5px; /* 0.1px 대신 명확한 5px 간격 사용 */
 }
+
 .navbar-logo-container a {
     font-size: 1.5rem;
     font-weight: 800;
@@ -38,11 +36,14 @@
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
+/* PC 메뉴 링크 스타일 */
 .navbar-links {
     display: flex;
     align-items: center;
     gap: 45px;
 }
+
 .navbar-links a {
     font-size: 0.95rem;
     font-weight: 400;
@@ -50,39 +51,36 @@
     cursor: pointer;
     text-decoration: none;
     transition: color 0.3s ease;
-    margin-left: 0;
 }
 
 .navbar-links a:hover {
-    color: #5B92E5; /* 마우스 오버 시 색상 변경 */
+    color: #5B92E5;
 }
-/* Navbar.css 파일 하단에 추가 */
 
-/* 🌟 1. 드롭다운 메뉴를 위한 Wrapper 설정 🌟 */
+/* PC 드롭다운 기본 스타일 */
 .nav-item-dropdown-wrapper {
-    position: relative; /* 드롭다운 메뉴의 위치 기준이 됩니다 */
+    position: relative;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* 🌟 2. 드롭다운 메뉴 컨테이너 🌟 */
 .dropdown-menu {
     position: absolute;
-    top: 100%; /* 네비게이션 바 바로 아래에 위치 */
+    top: 100%; 
     right: 50%;
     transform: translate(50%);
-    background-color: white; /* 흰색 배경 */
+    background-color: white;
     min-width: 150px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
-    z-index: 1000; /* 다른 요소 위에 표시되도록 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
     border-radius: 4px;
     overflow: hidden;
     padding: 5px 0;
 }
 
-/* 🌟 3. 드롭다운 메뉴 아이템 🌟 */
+/* 드롭다운 아이템 (PC 공통) */
 .dropdown-item {
     display: block;
     padding: 10px 15px;
@@ -90,84 +88,90 @@
     color: black !important; 
     font-size: 0.9rem;
     transition: background-color 0.2s ease;
-    white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 */
+    white-space: nowrap;
 }
 
 .dropdown-item:hover {
-    background-color: #f0f0f0; /* 호버 시 배경색 변경 */
-    color: #5B92E5; /* UNSA 메인 색상으로 텍스트 강조 */
+    background-color: #f0f0f0; 
+    color: #5B92E5;
 }
+
 .menu-toggle {
     display: none;
     cursor: pointer;
     font-size: 1.5rem;
     color: white;
 }
+
+/* ======================================================= */
+/* 🌟 모바일 스타일 (768px 이하) 🌟 */
+/* ======================================================= */
 @media (max-width: 768px) {
+    /* 1. 햄버거 아이콘 활성화 */
     .menu-toggle {
         display: block;
     }
+    
+    /* 2. 메뉴 컨테이너 숨기기/펼치기 */
     .navbar-links {
-        display: none;
-        background-color: #333333;
-        z-index: 999;
-    }
-    .navbar-links.open {
-        display: flex;
+        display: none; /* 기본 숨김 */
         position: absolute;
-        top: 60px;
+        top: 50px; 
         left: 0;
         right: 0;
         background-color: #333333;
-        flex-direction: column;
+        flex-direction: column; /* 수직 배열 */
         width: 100%;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         padding: 10px 0;
         z-index: 999;
-
     }
-    .navbar-links a, .nav-item-dropdown-wrapper {
+    
+    .navbar-links.open {
+        display: flex; /* JS로 'open' 클래스가 추가되면 펼쳐짐 */
+    }
+    
+    /* 3. 모든 메뉴 항목 (링크와 Wrapper)의 정렬 및 스타일 */
+    .navbar-links a, .navbar-links .member-link, .nav-item-dropdown-wrapper {
         width: 100%;
-        text-align: center;
+        color: white; /* 글자색 흰색 */
         padding: 10px 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         margin: 0;
         gap: 0;
+        
+        /* 🌟 텍스트 중앙 정렬 🌟 */
+        text-align: center;
+        
+        /* 🌟 Flexbox 중앙 정렬 (내부 콘텐츠 정렬) 🌟 */
+        display: flex;
+        justify-content: center; 
+        align-items: center;
     }
+
+    /* 4. 드롭다운 Wrapper 수정 (수직 밀림 현상 해결) */
+    .nav-item-dropdown-wrapper {
+        flex-direction: column; /* 수직으로 쌓이게 함 */
+        height: auto;
+    }
+    
+    /* 5. 드롭다운 메뉴 아이템 (지회장단/집행부) 정렬 수정 */
     .dropdown-menu {
+        position: static; /* 🌟 겹침 방지 (아래 메뉴를 밀어내게 함) 🌟 */
         width: 100%;
         min-width: 100%;
-        border-radius: 0;
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.1); 
         box-shadow: none;
-        position: static;
+        transform: none; /* PC용 transform 제거 */
     }
+    
+    /* 🌟 최종 수정: 드롭다운 메뉴 아이템 텍스트 중앙 정렬 🌟 */
     .dropdown-item {
         color: white !important;
         background-color: rgba(255, 255, 255, 0.1);
-        text-align: center;
-        padding: 10px 0 !important;
+        text-align: center; /* 👈 텍스트를 중앙에 정렬 */
+        padding: 8px 0 !important; /* 모바일에서 깔끔한 패딩 */
         width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .navbar-links a, .navbar-links .member-link, .nav-item-dropdown-wrapper{
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        margin: 0;
-        gap: 0;
-        display: flex;
-        justify-content: center;
-        color: white;
-    }
-    .nav-item-dropdown-wrapper {
-        flex-direction: column;
-        height: auto;
-
-    }
-    .dropdown-item {
-        justify-content: center;
+        /* 🌟 display: block; 속성이 이미 있으므로 text-align만으로 중앙 정렬 가능 🌟 */
     }
 }
