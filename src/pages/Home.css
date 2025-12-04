@@ -21,18 +21,6 @@
   padding-bottom: 50px;
 }
 
-/* 🌟 배경 오버레이: 어두운 배경 위에 흰 글자가 잘 보이도록 반투명 검은색 막을 씌웁니다. 🌟 */
-.home-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* 검정색 40% 투명도 */
-  z-index: 1; 
-}
-
 /* 2. 내용 스타일 */
 .home-content {
   position: relative; 
